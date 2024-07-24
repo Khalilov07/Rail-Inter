@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  padding: 0 50px;
+}
+
+.header__container {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 20px 50px;
+  align-items: center;
+  background-color: #000;
+  justify-content: space-between;
+}
+
+.header__contact {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.header__item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.header__icon {
+  color: #b1053d;
+}
+
+.header__link {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header__text {
+  color: #fff;
+  transition: 200ms;
+  letter-spacing: 1.2px;
+}
+
+.header__text:hover {
+  color: #b1053d;
+}
+
+.header__language {
+  display: flex;
+  gap: 10px;
+}
+
+.header__language-item {
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.header__language-item:hover {
+  color: #b1053d;
+}
+
+@media (max-width: 768px) {
+  .header__contact {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #b1053d;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.header {
+  top: 0;
+  position: sticky;
+}
+
+.navbar {
+  padding: 5px 50px;
+  background: #ffffffad;
+}
+
+/* Стили для ссылки при наведении */
+.navbar-nav  {
+  gap: 25px;
+  padding: 10px 0;
+}
+
+.nav-link {
+  color: #000;
+  font-weight: 400;
+  padding: 5px 25px;
+  text-align: center;
+  letter-spacing: 1.2px;
+}
+
+.nav-link::before {
+  color: #b1053d;
+}
+
+.navbar-nav .nav-link:active,
+.navbar-nav .nav-link:focus {
+    color: #000; /* Белый цвет текста при нажатии */
+}
+
+.navbar-nav .nav-link:hover {
+  background-color:#b1053d; /* Красный фон при наведении */
+  color: #FFF !important; /* Белый цвет текста при наведении */
+}
+
+/* Стили для dropdown меню */
+.dropdown-menu {
+  background-color: white;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #b1053d; /* Красный фон при наведении на пункт dropdown меню */
+  color: white; /* Белый цвет текста при наведении */
+}
+
+/* Убедитесь, что все ссылки в dropdown меню также имеют красный фон при наведении */
+.dropdown-item {
+  color: black;
+}
+
+.navbar-toggler {
+  border: 1px solid #FFF; 
+  outline: none !important;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* greeting */
+
+.greeting {
+  width: 100%;
+  height: 90vh;
+  background-image: url(../images/home/FirstSection.jpg);
+  background-size: cover;
+} 
