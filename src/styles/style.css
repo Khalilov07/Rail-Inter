@@ -1,10 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 .container {
@@ -76,6 +78,9 @@
     flex-direction: column;
     align-items: center;
   }
+  .header__container {
+    padding: 20px 30px;
+  }
 }
 
 .scroll-to-top {
@@ -110,7 +115,7 @@
 }
 
 /* Стили для ссылки при наведении */
-.navbar-nav  {
+.navbar-nav {
   gap: 25px;
   padding: 10px 0;
 }
@@ -129,12 +134,12 @@
 
 .navbar-nav .nav-link:active,
 .navbar-nav .nav-link:focus {
-    color: #000; /* Белый цвет текста при нажатии */
+  color: #000; /* Белый цвет текста при нажатии */
 }
 
 .navbar-nav .nav-link:hover {
-  background-color:#b1053d; /* Красный фон при наведении */
-  color: #FFF !important; /* Белый цвет текста при наведении */
+  background-color: #b1053d; /* Красный фон при наведении */
+  color: #fff !important; /* Белый цвет текста при наведении */
 }
 
 /* Стили для dropdown меню */
@@ -155,19 +160,78 @@
 }
 
 .navbar-toggler {
-  border: 1px solid #FFF; 
+  border: 1px solid #000;
   outline: none !important;
-  color: #FFF;
+  color: #000;
   display: flex;
   flex-direction: column;
 }
-
 
 /* greeting */
 
 .greeting {
   width: 100%;
-  height: 90vh;
   background-image: url(../images/home/FirstSection.jpg);
   background-size: cover;
-} 
+}
+
+.greeting__wrapper {
+  display: flex;
+  min-height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.greeting__title {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  letter-spacing: 1.2px;
+  background: rgba(61, 61, 61, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+.greeting__title span {
+  display: block;
+  margin: 10px 0;
+  font-size: 0.6em;
+  line-height: 1.5;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  color: white;
+  background-color: #ff6f61;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.5em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #b1053d;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .greeting__title {
+    padding: 10px;
+    font-size: 1.1em;
+    max-width: 100%;
+  }
+
+  .greeting__title span {
+    margin: 5px 0;
+    font-size: 1em;
+  }
+  .button {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+}
