@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener("DOMContentLoaded", function () {
   const scrollToTopButton = document.getElementById("scrollToTop");
 
@@ -12,11 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Прокрутка вверх при клике на кнопку
-scrollToTopButton.addEventListener("click", () => {
+  scrollToTopButton.addEventListener("click", () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   });
 });
-
