@@ -1,0 +1,78 @@
+.services {
+    padding: 50px;
+  }
+  
+  .services__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .services__item {
+    position: relative;
+    flex: 1 1 30%; /* Блоки занимают 30% ширины с возможностью уменьшения */
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .services__line {
+    width: 100px;
+    height: 1px;
+    margin-bottom: 25px;
+    background: #b1053d;
+  }
+  
+  .services__item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .services__item:hover img {
+    transform: scale(1.1);
+  }
+  
+  .services__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .services__item:hover .services__content {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.6); /* Полупрозрачный черный фон */
+  }
+  
+  .services__content h3, .services__content p {
+    margin: 10px 0;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  @media (max-width: 600px) {
+    .services__item {
+        flex: 1 1 45%; /* Блоки занимают 45% ширины на средних экранах */
+    }
+  
+    .services {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .services__item {
+        flex: 1 1 100%; /* Блоки занимают 100% ширины на маленьких экранах */
+    }
+  }
+  
+  

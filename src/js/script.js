@@ -18,3 +18,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const currentLocation = window.location.pathname;
+  const menuItems = document.querySelectorAll('.nav-link');
+
+  console.log(currentLocation);
+  console.log(menuItems);
+
+  menuItems.forEach(item => {
+      if(item.getAttribute('href') === currentLocation) {
+          item.classList.add('active');
+      }
+  });
+});
