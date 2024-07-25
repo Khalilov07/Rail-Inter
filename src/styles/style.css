@@ -361,7 +361,16 @@
 }
 
 @media (max-width: 600px) {
+
+  .wrapper {
+    padding: 0 20px;
+  }
+
   .contact-block {
+
+    width: 100% !important;
+    text-align: center;
+    padding: 0 !important;
     flex-direction: column;
     align-items: flex-start;
   }
