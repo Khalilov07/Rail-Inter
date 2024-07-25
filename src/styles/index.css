@@ -265,15 +265,15 @@
     background: rgba(0, 0, 0, 0.6); /* Полупрозрачный черный фон */
   }
   
-  .services__content h3, .services__content p {
-    margin: 10px 0;
-    padding: 0 20px;
+  .services__content h3 {
     text-align: center;
+    font-size: 1.3em;
   }
   
   @media (max-width: 600px) {
     .services__item {
         flex: 1 1 45%; /* Блоки занимают 45% ширины на средних экранах */
+        
     }
   
     .services {
