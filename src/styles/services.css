@@ -1,78 +1,132 @@
-.services {
-    padding: 50px;
+.service {
+  padding: 50px;
+}
+
+.services__line {
+  width: 100px;
+  height: 1px;
+  margin-bottom: 25px;
+  background: #b1053d;
+}
+
+.services__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.service-block {
+  position: relative;
+  width: calc(33.333% - 20px);
+  margin: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.service-block:nth-child(even) {
+  transform: translateX(100%);
+}
+
+.service-block.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.service-block:hover {
+  transform: scale(1.05);
+}
+
+.service-block::before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7);
+  transition: filter 0.3s ease-in-out;
+}
+
+#service1::before {
+  background-image: url('https://www.interfax.ru/ftproot/photos/photostory/2019/07/09/week4_700.jpg');
+}
+
+#service2::before {
+  background-image: url('https://www.interfax.ru/ftproot/photos/photostory/2019/07/09/week4_700.jpg');
+
+}
+
+#service3::before {
+  background-image: url('https://www.interfax.ru/ftproot/photos/photostory/2019/07/09/week4_700.jpg');
+
+}
+
+#service4::before {
+  background-image: url('https://www.interfax.ru/ftproot/photos/photostory/2019/07/09/week4_700.jpg');
+
+}
+
+#service5::before {
+  background-image: url('https://www.interfax.ru/ftproot/photos/photostory/2019/07/09/week4_700.jpg');
+
+}
+
+#service6::before {
+  background-image: url('https://www.interfax.ru/ftproot/photos/photostory/2019/07/09/week4_700.jpg');
+
+}
+
+.service-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.service-block:hover .service-content {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.service-content h3 {
+  font-size: 100%;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+@media (max-width: 992px) {
+  .service-block {
+      width: calc(50% - 20px);
+      background: transparent;
   }
-  
-  .services__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  .service-content {
+    background: transparent;
   }
-  
-  .services__item {
-    position: relative;
-    flex: 1 1 30%; /* Блоки занимают 30% ширины с возможностью уменьшения */
-    margin: 10px;
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
+
+}
+
+@media (max-width: 700px) {
+  .service-block {
+      width: calc(100% - 20px);
   }
-  
-  .services__line {
-    width: 100px;
-    height: 1px;
-    margin-bottom: 25px;
-    background: #b1053d;
+  .service-content h3 {
+    font-weight: 600;
+    font-size: 80%;
   }
-  
-  .services__item img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .services__item:hover img {
-    transform: scale(1.1);
-  }
-  
-  .services__content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  .services__item:hover .services__content {
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.6); /* Полупрозрачный черный фон */
-  }
-  
-  .services__content h3, .services__content p {
-    margin: 10px 0;
-    padding: 0 20px;
-    text-align: center;
-  }
-  
-  @media (max-width: 600px) {
-    .services__item {
-        flex: 1 1 45%; /* Блоки занимают 45% ширины на средних экранах */
-    }
-  
-    .services {
-      padding: 20px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .services__item {
-        flex: 1 1 100%; /* Блоки занимают 100% ширины на маленьких экранах */
-    }
-  }
-  
-  
+}
