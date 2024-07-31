@@ -124,6 +124,10 @@
     background: transparent;
   }
 
+  .service {
+    padding: 50px;
+  }
+
 }
 
 @media (max-width: 700px) {
@@ -132,6 +136,20 @@
   }
   .service-content h3 {
     font-weight: 600;
-    font-size: 80%;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 550px) {
+  .service-block {
+      width: calc(100% - 20px);
+  }
+  .service-content h3 {
+    font-weight: 600;
+    font-size: 100%;
+  }
+
+  .service {
+    padding: 20px;
   }
 }
