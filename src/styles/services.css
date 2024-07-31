@@ -58,31 +58,36 @@
 }
 
 #service1::before {
-  background-image: url('https://www.interfax.ru/ftproot/photos/photostory/2019/07/09/week4_700.jpg');
+  background-image: url('../images/home/asd.webp');
 }
 
 #service2::before {
-  background-image: url('https://www.interfax.ru/ftproot/photos/photostory/2019/07/09/week4_700.jpg');
+  background-image: url('../images/home/asd.webp');
+
 
 }
 
 #service3::before {
-  background-image: url('https://www.interfax.ru/ftproot/photos/photostory/2019/07/09/week4_700.jpg');
+  background-image: url('../images/home/asd.webp');
+
 
 }
 
 #service4::before {
-  background-image: url('https://www.interfax.ru/ftproot/photos/photostory/2019/07/09/week4_700.jpg');
+  background-image: url('../images/home/asd.webp');
+
 
 }
 
 #service5::before {
-  background-image: url('https://www.interfax.ru/ftproot/photos/photostory/2019/07/09/week4_700.jpg');
+  background-image: url('../images/home/asd.webp');
+
 
 }
 
 #service6::before {
-  background-image: url('https://www.interfax.ru/ftproot/photos/photostory/2019/07/09/week4_700.jpg');
+  background-image: url('../images/home/asd.webp');
+
 
 }
 
