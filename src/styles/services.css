@@ -58,17 +58,17 @@
 }
 
 #service1::before {
-  background-image: url('../images/home/asd.webp');
+  background-image: url('../images/services/first.jpg');
 }
 
 #service2::before {
-  background-image: url('../images/home/asd.webp');
+  background-image: url('../images/services/second.jpg');
 
 
 }
 
 #service3::before {
-  background-image: url('../images/home/asd.webp');
+  background-image: url('../images/services/third.png');
 
 
 }
