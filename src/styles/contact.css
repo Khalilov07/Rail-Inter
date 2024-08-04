@@ -1,0 +1,32 @@
+.contacts {
+    padding: 50px;
+}
+
+.contacts__info {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contacts h1 {
+  font-size: 48px;
+  letter-spacing: 1.2px;
+  -webkit-text-stroke: 0.2px #000; /* Для Webkit-браузеров */
+  text-stroke: 0.2px #fff; /* Для других браузеров */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Тень для текста */
+}
+
+.contacts__line {
+  width: 100px;
+  height: 2px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background: #b1053d;
+}
+
+@media (max-width: 600px) {
+    .contacts {
+        padding: 20px;
+    }
+}
