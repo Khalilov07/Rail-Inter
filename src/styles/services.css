@@ -1,16 +1,36 @@
-.service {
-  padding: 50px;
-}
-
 .services__info {
+  position: relative;
+  background-image: url("../images/home/FirstSection.jpg"); /* Замените на путь к вашему изображению */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
   display: flex;
+  padding: 50px;
+  color: #fff;
   text-align: center;
   align-items: center;
   flex-direction: column;
 }
 
+.services__info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Полупрозрачный черный наложение для лучшей читаемости текста */
+  z-index: 0;
+}
+
 .service h1 {
-  font-size: 48px;
+  font-size: 38px;
+  z-index: 1;
   letter-spacing: 1.2px;
   -webkit-text-stroke: 0.2px #000; /* Для Webkit-браузеров */
   text-stroke: 0.2px #fff; /* Для других браузеров */
@@ -19,17 +39,23 @@
 
 .services__line {
   width: 100px;
+  z-index: 1;
   height: 2px;
   margin-top: 25px;
   margin-bottom: 25px;
   background: #b1053d;
 }
 
+.service p {
+  z-index: 1;
+}
+
 .services__wrapper {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 20px;
+  padding: 50px;
+  overflow-x: hidden;
 }
 
 .row {
@@ -74,37 +100,27 @@
 }
 
 #service1::before {
-  background-image: url('../images/services/first.jpg');
+  background-image: url("../images/services/first.jpg");
 }
 
 #service2::before {
-  background-image: url('../images/services/second.jpg');
-
-
+  background-image: url("../images/services/second.jpg");
 }
 
 #service3::before {
-  background-image: url('../images/services/third.png');
-
-
+  background-image: url("../images/services/third.png");
 }
 
 #service4::before {
-  background-image: url('../images/services/fourth.webp');
-
-
+  background-image: url("../images/services/fourth.webp");
 }
 
 #service5::before {
-  background-image: url('../images/home/asd.webp');
-
-
+  background-image: url("../images/home/asd.webp");
 }
 
 #service6::before {
-  background-image: url('../images/services/last.jpg');
-
-
+  background-image: url("../images/services/last.jpg");
 }
 
 .service-content {
@@ -133,22 +149,17 @@
 
 @media (max-width: 992px) {
   .service-block {
-      width: calc(50% - 20px);
-      background: transparent;
+    width: calc(50% - 20px);
+    background: transparent;
   }
   .service-content {
     background: transparent;
   }
-
-  .service {
-    padding: 50px;
-  }
-
 }
 
 @media (max-width: 700px) {
   .service-block {
-      width: calc(100% - 20px);
+    width: calc(100% - 20px);
   }
   .service-content h3 {
     font-weight: 600;
@@ -156,16 +167,18 @@
   }
 }
 
+@media (max-width: 600px) {
+  .services__wrapper {
+    padding: 20px;
+  }
+}
+
 @media (max-width: 550px) {
   .service-block {
-      width: calc(100% - 20px);
+    width: calc(100% - 20px);
   }
   .service-content h3 {
     font-weight: 600;
     font-size: 100%;
-  }
-
-  .service {
-    padding: 20px;
   }
 }

@@ -1,17 +1,37 @@
-.contacts {
-    padding: 50px;
-}
-
 .contacts__info {
+  position: relative;
+  background-image: url("../images/home/FirstSection.jpg"); /* Замените на путь к вашему изображению */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
   display: flex;
+  padding: 50px;
+  color: #fff;
   text-align: center;
   align-items: center;
   flex-direction: column;
 }
 
+.contacts__info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Полупрозрачный черный наложение для лучшей читаемости текста */
+  z-index: 0;
+}
+
 .contacts h1 {
-  font-size: 48px;
+  font-size: 38px;
   letter-spacing: 1.2px;
+  z-index: 1;
   -webkit-text-stroke: 0.2px #000; /* Для Webkit-браузеров */
   text-stroke: 0.2px #fff; /* Для других браузеров */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Тень для текста */
@@ -20,13 +40,19 @@
 .contacts__line {
   width: 100px;
   height: 2px;
+  z-index: 1;
   margin-top: 25px;
   margin-bottom: 25px;
   background: #b1053d;
 }
 
+.contacts__info p {
+  z-index: 1;
+
+}
+
 @media (max-width: 600px) {
-    .contacts {
-        padding: 20px;
-    }
+  .contacts__info {
+    padding: 20px;
+  }
 }
