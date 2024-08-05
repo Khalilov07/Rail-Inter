@@ -2,6 +2,7 @@
   width: 100%;
   background-image: url(../images/home/FirstSection.jpg);
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .greeting__wrapper {
