@@ -1,13 +1,14 @@
 .services__info {
   position: relative;
-  background-image: url("../images/home/FirstSection.jpg"); /* Замените на путь к вашему изображению */
-  background-attachment: fixed;
+  background-image: url("../images/services/for-greeting.jpg"); /* Замените на путь к вашему изображению */
   background-size: cover;
   background-position: center;
   display: flex;
   padding: 50px;
+  height: 60vh;
   color: #fff;
   text-align: center;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
 }

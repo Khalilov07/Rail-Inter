@@ -1,6 +1,6 @@
 .about__info {
   position: relative;
-  background-image: url("../images/home/FirstSection.jpg"); /* Замените на путь к вашему изображению */
+  background-image: url("../images/about/for\ greeting.jpg"); /* Замените на путь к вашему изображению */
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -8,6 +8,8 @@
   padding: 50px;
   color: #fff;
   text-align: center;
+  height: 60vh;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
