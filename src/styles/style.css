@@ -183,14 +183,14 @@
   }
 }
 
-.nav-link.active { 
+.nav-link.active {
   background-color: #b1053d !important; /* Красный фон для активной ссылки */
-  color: #FFF !important; /* Белый цвет текста для активной ссылки */
+  color: #fff !important; /* Белый цвет текста для активной ссылки */
 }
 
 .footer {
   background: #191919;
-  color: #D1D1D1;
+  color: #d1d1d1;
   padding: 40px 50px;
   display: flex;
   flex-wrap: wrap;
@@ -209,7 +209,7 @@
   font-size: 1.2em;
 }
 
-.footer__contacts p{
+.footer__contacts p {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -219,16 +219,17 @@
   width: 100px;
   height: 1px;
   margin-bottom: 25px;
-  background: #D1D1D1;
+  background: #d1d1d1;
 }
 
-.footer p, a {
+.footer p,
+a {
   font-size: 0.9em;
 }
 
 .footer__section a {
   color: #d1d1d1;
-  text-decoration: none
+  text-decoration: none;
 }
 
 .footer__section p {
@@ -263,7 +264,8 @@
     margin-bottom: 5px;
   }
 
-  .footer__contacts, .footer__section {
+  .footer__contacts,
+  .footer__section {
     display: flex;
     gap: 10px;
     align-items: center;
@@ -274,5 +276,89 @@
   .footer__line {
     margin-bottom: 15px;
   }
+}
 
+.contact {
+  padding: 50px 0;
+  background: #f7f7f7;
+}
+
+.contact-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100% !important;
+}
+
+.contact-block__text {
+  flex: 1;
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: #333;
+}
+
+.contact-block__textFrist {
+  font-size: 1.2em !important;
+}
+
+.contact-block__textSecond {
+  padding-top: 20px;
+  color: #333333b6;
+  font-size: 0.9em !important;
+}
+
+.contact-block__email,
+.contact-block__tel {
+  color: #b1053d;
+}
+
+.contact-block__text p {
+  margin: 0;
+}
+
+.contact-block__button {
+  display: flex;
+  align-items: center;
+  background-color: #b1053d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-block__button:hover {
+  background-color: #b1053ec8;
+  color: #fff;
+}
+
+.contact-block__button i {
+  margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+
+  .contact-block {
+    width: 100% !important;
+    text-align: center;
+    padding: 0 !important;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-block__text {
+    text-align: center;
+  }
+
+  .contact-block__button {
+    margin-top: 15px;
+    width: 100%;
+    justify-content: center;
+  }
 }
