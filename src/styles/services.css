@@ -158,6 +158,17 @@
   }
 
   .services__item {
-    width: 80%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .services__wrapper {
+    padding: 20px;
+  }
+
+  .services__item {
+    width: 100%;
   }
 }
