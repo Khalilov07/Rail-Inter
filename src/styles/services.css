@@ -165,7 +165,7 @@
 @media (max-width: 600px) {
 
   .services__wrapper {
-    padding: 20px;
+    padding: 50px 20px;
   }
 
   .services__item {
