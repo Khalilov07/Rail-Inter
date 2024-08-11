@@ -1,8 +1,5 @@
 .greeting {
-  width: 100%;
-  background-image: url(../images/home/FirstSection.jpg);
-  background-size: cover;
- background-position: center;
+  background-image: url(../images/home/Back.jpg);
 }
 
 .greeting__wrapper {
@@ -13,23 +10,22 @@
 }
 
 .greeting__title {
-  color: white;
+  color: #fff;
   text-align: center;
-  padding: 20px;
-  font-weight: bold;
+  width: 70%;
+  padding: 60px;
+  background: #fefcf227;
+  font-weight: 600;
   letter-spacing: 1.2px;
-  -webkit-text-stroke: 0.2px #000; /* Для Webkit-браузеров */
-  text-stroke: 0.2px #fff; /* Для других браузеров */
   border-radius: 10px;
-  max-width: 80%;
+  margin: 10px 0;
+  line-height: 1.7;
+  font-size: 1.6em;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Тень для текста */
 }
 
-.greeting__title span {
+.greeting__title a {
   display: block;
-  margin: 10px 0;
-  font-size: 0.7em;
-  line-height: 1.5;
 }
 
 .button {
@@ -251,7 +247,7 @@
 
 .services__btn {
   border: none;
-  color: #FFF;
+  color: #fff;
   margin-top: 5px;
   transition: 200ms;
   padding: 5px 10px;

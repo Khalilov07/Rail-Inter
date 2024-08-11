@@ -29,9 +29,9 @@
   z-index: 0;
 }
 
-.service h1 {
+.services h1 {
   font-size: 38px;
-  z-index: 1;
+  z-index: 2;
   letter-spacing: 1.2px;
   -webkit-text-stroke: 0.2px #000; /* Для Webkit-браузеров */
   text-stroke: 0.2px #fff; /* Для других браузеров */
@@ -47,138 +47,95 @@
   background: #b1053d;
 }
 
-.service p {
+.services p {
   z-index: 1;
 }
 
 .services__wrapper {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  padding: 50px;
-}
-
-.row {
-  display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  gap: 20px;
+  padding: 100px 50px;
 }
 
-.service-block {
+.services__item {
   position: relative;
-  width: calc(33.333% - 20px);
-  margin: 10px;
   overflow: hidden;
+  width: 32%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  opacity: 0;
-  transform: translateX(-100%);
 }
 
-.service-block:nth-child(even) {
-  transform: translateX(100%);
-}
-
-.service-block.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.service-block:hover {
-  transform: scale(1.05);
-}
-
-.service-block::before {
+.services__item::before {
   content: "";
-  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 aspect ratio */
+  height: 100%;
   background-size: cover;
   background-position: center;
-  filter: brightness(0.7);
-  transition: filter 0.3s ease-in-out;
 }
 
 #service1::before {
-  background-image: url("../images/services/first.jpg");
+  background-image: url("/src/images/services/first.jpg"); /* Укажите путь к изображению */
 }
 
 #service2::before {
-  background-image: url("../images/services/second.jpg");
+  background-image: url("/src/images/services/second.jpg");
 }
 
 #service3::before {
-  background-image: url("../images/services/third.png");
+  background-image: url("/src/images/services/third.png");
 }
 
 #service4::before {
-  background-image: url("../images/services/fourth.webp");
+  background-image: url("/src/images/services/fourth.webp");
 }
 
 #service5::before {
-  background-image: url("../images/home/asd.webp");
+  background-image: url("/src/images/services/five.jfif");
 }
 
 #service6::before {
-  background-image: url("../images/services/last.jpg");
+  background-image: url("/src/images/services/last.jpg");
 }
 
-.service-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 80%;
-  transform: translate(-50%, -50%);
-  color: white;
+.service__content {
+  position: relative;
+  padding: 20px;
   text-align: center;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Темный полупрозрачный фон для текста */
   border-radius: 10px;
-  transition: background-color 0.3s ease-in-out;
+  color: #fff;
+  width: 80%;
 }
 
-.service-block:hover .service-content {
-  background-color: rgba(0, 0, 0, 0.7);
+.service__title {
+  font-size: 18px;
+  line-height: 1.4;
+  letter-spacing: 1.2px;
 }
 
-.service-content h3 {
-  font-size: 100%;
-  line-height: 1.5;
-  font-weight: 400;
-}
-
-@media (max-width: 992px) {
-  .service-block {
-    width: calc(50% - 20px);
-    background: transparent;
-  }
-  .service-content {
-    background: transparent;
-  }
-}
-
-@media (max-width: 700px) {
-  .service-block {
-    width: calc(100% - 20px);
-  }
-  .service-content h3 {
-    font-weight: 600;
-    font-size: 25px;
-  }
-}
-
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .services__wrapper {
-    padding: 20px;
+  
   }
 }
 
-@media (max-width: 550px) {
-  .service-block {
-    width: calc(100% - 20px);
-  }
-  .service-content h3 {
-    font-weight: 600;
-    font-size: 100%;
+@media (max-width: 480px) {
+  .services__wrapper {
+
   }
 }

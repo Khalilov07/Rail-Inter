@@ -33,24 +33,24 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const serviceBlocks = document.querySelectorAll(".service-block");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const serviceBlocks = document.querySelectorAll(".service-block");
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.1,
-    }
-  );
+//   const observer = new IntersectionObserver(
+//     (entries) => {
+//       entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//           entry.target.classList.add("visible");
+//           observer.unobserve(entry.target);
+//         }
+//       });
+//     },
+//     {
+//       threshold: 0,
+//     }
+//   );
 
-  serviceBlocks.forEach((block) => {
-    observer.observe(block);
-  });
-});
+//   serviceBlocks.forEach((block) => {
+//     observer.observe(block);
+//   });
+// });
