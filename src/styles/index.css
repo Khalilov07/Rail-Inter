@@ -52,6 +52,8 @@
 @media (max-width: 768px) {
   .greeting {
     padding: 80px 20px;
+    background-attachment: scroll; /* Стандартное поведение фона */
+    background-position: center center;
   }
 
   .greeting__title {
