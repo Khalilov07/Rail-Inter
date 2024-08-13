@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
 // document.addEventListener("DOMContentLoaded", () => {
 //   const serviceBlocks = document.querySelectorAll(".service-block");
 
