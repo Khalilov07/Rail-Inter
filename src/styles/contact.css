@@ -93,9 +93,9 @@
 }
 
 .maps__contentInfo {
+  gap: 50px;
   width: 40%;
   display: flex;
-  gap: 50px;
   flex-direction: column;
 }
 
