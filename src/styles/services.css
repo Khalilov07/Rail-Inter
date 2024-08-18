@@ -1,19 +1,17 @@
 .services__info {
   position: relative;
-  background-image: url("../images/services/five.jfif"); /* Замените на путь к вашему изображению */
+  background-image: url("../images/services/for-greeting.jpg"); /* Замените на путь к вашему изображению */
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   display: flex;
   padding: 50px;
-  height: 60vh;
   color: #fff;
-  text-align: center;
   justify-content: center;
+  height: 60vh;
+  text-align: center;
   align-items: center;
   flex-direction: column;
-  background-attachment: fixed; /* Фиксация фона для параллакса */
-  position: relative;
-  overflow: hidden;
 }
 
 .services__info::before {
