@@ -1,7 +1,7 @@
 .greeting {
   background: url("/src/images/home/FirstSection.jpg") no-repeat center
     center/cover; /* Замените на путь к вашему фоновому изображению */
-  padding: 100px 20px;
+  padding: 100px 0;
   color: #fff;
   text-align: center;
   display: flex;
@@ -27,7 +27,7 @@
 
 .greeting__title {
   font-size: 2.2em;
-  color: #FFF;
+  color: #fff;
   font-weight: bold;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .greeting__btn:hover {
-  color: #FFF;
+  color: #fff;
   background-color: #b1053ec3;
 }
 
@@ -57,6 +57,12 @@
   .greeting__wrapper {
     padding: 30px;
     max-width: 100%;
+  }
+
+  .greeting {
+    padding: 50px 0;
+    background-attachment: scroll; /* Фиксация фона для параллакса */
+    background-position: center center;
   }
 
   .greeting__title {

@@ -150,3 +150,10 @@
     padding: 8px 15px;
   }
 }
+
+@media (max-width: 768px) {
+  .services__info {
+    background-attachment: scroll; /* Фиксация фона для параллакса */
+    background-position: center center;
+  }
+}
