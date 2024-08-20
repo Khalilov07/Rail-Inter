@@ -1,6 +1,6 @@
 .greeting {
-  background: url("/src/images/home/FirstSection.jpg") no-repeat center
-    center/cover; /* Замените на путь к вашему фоновому изображению */
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/src/images/home/FirstSection.jpg") center/cover;
   padding: 100px 0;
   color: #fff;
   text-align: center;
@@ -15,25 +15,38 @@
 
 .greeting__wrapper {
   display: flex;
+  z-index: 100;
+  position: relative;
   flex-direction: column;
   align-items: flex-start; /* Выравнивание по левой стороне */
   padding: 50px;
   text-align: left;
-  gap: 20px;
   max-width: 80%; /* Ограничение ширины блока */
   position: relative;
   left: 0;
 }
 
 .greeting__title {
-  font-size: 2.2em;
+  font-size: 2.5em;
   color: #fff;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Тень для улучшения контраста */
   font-weight: bold;
 }
 
+/* .greeting__line {
+  height: 2px;
+  width: 10%;
+  background: #b1053ec3;
+} */
+
 .greeting__descr {
   font-size: 1.2em;
-  color: #e2e2e2;
+  color: #ffffff;
+  font-weight: 400;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Тень для улучшения контраста */
+  margin: 0;
+  padding: 40px 0;
 }
 
 .greeting__btn {
