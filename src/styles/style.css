@@ -101,6 +101,7 @@
 }
 
 .scroll-to-top:hover {
+  background: #b1053ed1;
   transform: translateY(-5px);
 }
 
@@ -133,6 +134,12 @@
 .navbar-nav {
   gap: 25px;
   padding: 10px 0;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+  padding: 25px 0 !important;
+  }
 }
 
 .nav-link {
@@ -308,7 +315,7 @@ a {
 }
 
 .contact-block__textSecond {
-  padding-top: 20px;
+  padding: 30px;
   color: #333333b6;
   font-size: 0.9em !important;
 }
