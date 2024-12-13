@@ -33,25 +33,22 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return rect.top <= window.innerHeight && rect.bottom >= 0;
+}
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const serviceBlocks = document.querySelectorAll(".service-block");
+// Обработчик появления блоков
+function handleScroll() {
+  const blocks = document.querySelectorAll(".block");
+  blocks.forEach((block) => {
+    if (isInViewport(block)) {
+      block.classList.add("visible");
+      block.classList.remove("hidden");
+    }
+  });
+}
 
-//   const observer = new IntersectionObserver(
-//     (entries) => {
-//       entries.forEach((entry) => {
-//         if (entry.isIntersecting) {
-//           entry.target.classList.add("visible");
-//           observer.unobserve(entry.target);
-//         }
-//       });
-//     },
-//     {
-//       threshold: 0,
-//     }
-//   );
-
-//   serviceBlocks.forEach((block) => {
-//     observer.observe(block);
-//   });
-// });
+// Запуск обработчика при загрузке страницы и прокрутке
+window.addEventListener("scroll", handleScroll);
+window.addEventListener("load", handleScroll);
