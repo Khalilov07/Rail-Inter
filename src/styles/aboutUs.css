@@ -1,3 +1,15 @@
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Элементы, которые появляются */
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .about__info {
   position: relative;
   background-image: url("../images/about/for\ greeting.jpg"); /* Замените на путь к вашему изображению */
@@ -78,6 +90,21 @@
 .feature-item {
   text-align: center;
   width: 32%;
+  transition: 300ms;
+}
+
+.feature-item:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+
+.feature-item:nth-child(2) {
+  transition-delay: 0.4s;
+}
+
+
+.feature-item:nth-child(3) {
+  transition-delay: 0.6s;
 }
 
 .fa-headset,

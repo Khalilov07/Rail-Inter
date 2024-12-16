@@ -40,7 +40,12 @@ function isInViewport(element) {
 
 // Обработчик появления блоков
 function handleScroll() {
-  const blocks = document.querySelectorAll(".block");
+  const blocks = document.querySelectorAll(
+    ".block, .services__item, .feature-item"
+  );
+
+  console.log(blocks);
+
   blocks.forEach((block) => {
     if (isInViewport(block)) {
       block.classList.add("visible");
@@ -48,6 +53,38 @@ function handleScroll() {
     }
   });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const swiper = new Swiper('.services__swiper', {
+    slidesPerView: 3, // Количество слайдов, видимых одновременно
+    spaceBetween: 20, // Расстояние между слайдами
+    loop: true, // Бесконечный цикл
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    autoplay: {
+      delay: 4000, // Автопрокрутка каждые 4 секунды
+      disableOnInteraction: false, // Продолжать автопрокрутку даже после взаимодействия
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 2.5,
+      },
+    },
+  });
+});
+
 
 // Запуск обработчика при загрузке страницы и прокрутке
 window.addEventListener("scroll", handleScroll);
