@@ -143,7 +143,7 @@
 /* Адаптация под мобильные устройства */
 @media (max-width: 768px) {
   .services__items {
-    padding: 5px 20px;
+    padding: 40px 20px;
   }
   .services__item {
     width: calc(50% - 20px); /* Два элемента в ряд на планшетах */
