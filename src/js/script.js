@@ -41,7 +41,7 @@ function isInViewport(element) {
 // Обработчик появления блоков
 function handleScroll() {
   const blocks = document.querySelectorAll(
-    ".block, .services__item, .feature-item"
+    ".block, .services__item, .feature-item, .services__item"
   );
 
   console.log(blocks);
